@@ -11,7 +11,7 @@ While `pycountry` is primarily designed to serve as a database for ISO standards
 <!-- GETTING STARTED -->
 ## Getting Started
 
-### Prerequisites
+### Installation
 Binary installers for the latest released version are available at the Python Package Index (PyPI)
  ```sh
  pip install countrywrangler
