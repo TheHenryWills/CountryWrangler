@@ -17,6 +17,8 @@ Binary installers for the latest released version are available at the Python Pa
  pip install countrywrangler
  ```
 
+<!-- USAGE EXAMPLES -->
+## Usage Examples
 
 <!-- LICENSE -->
 ## License
