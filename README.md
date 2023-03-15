@@ -142,7 +142,7 @@ Project Link: [https://github.com/TheHenryWills/CountryWrangler](https://github.
 ## Acknowledgments
 
 * [Inspired by pycountry](https://github.com/flyingcircusio/pycountry)
-* [Country names and codes based on world_countries](https://stefangabos.github.io/world_countries/)
+* [Country names and codes based on world_countries by Stefan Gabos](https://stefangabos.github.io/world_countries/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
