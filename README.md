@@ -7,6 +7,9 @@
 
 While `pycountry` is primarily designed to serve as a database for ISO standards, CountryWrangler is specifically developed to normalize country data. Both libraries cater to their respective use cases. Additionally, CountryWrangler offers extra country functions that are designed to handle messy country data with ease.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -16,9 +19,17 @@ Binary installers for the latest released version are available at the Python Pa
  ```sh
  pip install countrywrangler
  ```
+ <p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
+ 
+ 
 
 <!-- USAGE EXAMPLES -->
 ## Usage Examples
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -37,3 +48,22 @@ See the [open issues](https://github.com/TheHenryWills/CountryWrangler/issues) f
 `CountryWrangler` is Open Source and distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+* [Malven's Grid Cheatsheet](https://grid.malven.co/)
+* [Img Shields](https://shields.io)
+* [GitHub Pages](https://pages.github.com)
+* [Font Awesome](https://fontawesome.com)
+* [React Icons](https://react-icons.github.io/react-icons/search)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
