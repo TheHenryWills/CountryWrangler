@@ -27,7 +27,7 @@
     ·
     <a href="https://github.com/TheHenryWills/CountryWrangler/issues/new">Report Bug</a>
     ·
-    <a href=""https://github.com/TheHenryWills/CountryWrangler/issues/new">Request Feature</a>
+    <a href="https://github.com/TheHenryWills/CountryWrangler/issues/new">Request Feature</a>
   </p>
 </div>
 
