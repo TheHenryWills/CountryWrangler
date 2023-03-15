@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+
 # Distribution / packaging
 .Python
 build/
