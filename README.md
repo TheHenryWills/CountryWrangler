@@ -56,7 +56,7 @@ See the [open issues](https://github.com/TheHenryWills/CountryWrangler/issues) f
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Inspired by pycountry]((https://github.com/flyingcircusio/pycountry)
+* [Inspired by pycountry](https://github.com/flyingcircusio/pycountry)
 * [Country names and codes based on world_countries](https://stefangabos.github.io/world_countries/)
 
 
