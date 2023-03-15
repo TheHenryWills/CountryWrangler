@@ -18,7 +18,6 @@ While `pycountry` is primarily designed to serve as a database for ISO standards
   ```
 
 
-
 <!-- LICENSE -->
 ## License
 
