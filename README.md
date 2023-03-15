@@ -120,7 +120,7 @@ Don't forget to give the project a star! Thanks you!
 <!-- LICENSE -->
 ## License
 
-`CountryWrangler` is Open Source and distributed under the MIT License. See `LICENSE` 
+CountryWrangler is Open Source and distributed under the MIT License. See `LICENSE` 
 
 Copyright (c) 2016-2023 Henry Wills
 
