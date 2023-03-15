@@ -159,7 +159,7 @@ Project Link: [https://github.com/TheHenryWills/CountryWrangler](https://github.
 [stars-url]: https://github.com/TheHenryWills/CountryWrangler/stargazers
 [issues-shield]: https://img.shields.io/github/issues/TheHenryWills/CountryWrangler.svg?style=for-the-badge
 [issues-url]: https://github.com/TheHenryWills/CountryWrangler/issues
-[license-shield]: https://img.shields.io/github/license/TheHenryWills/CountryWranglere.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/TheHenryWills/CountryWrangler.svg?style=for-the-badge
 [license-url]: https://github.com/TheHenryWills/CountryWrangler/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/henry-wills
