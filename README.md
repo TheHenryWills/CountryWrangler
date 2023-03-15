@@ -54,7 +54,7 @@ See the [open issues](https://github.com/TheHenryWills/CountryWrangler/issues) f
 <!-- CONTACT -->
 ## Contact
 
-Henry Wills - [Linktree - @TheHenryWills](https://linktr.ee/thehenrywills) - email@example.com
+Henry Wills - [Linktree - @TheHenryWills](https://linktr.ee/thehenrywills)
 
 Project Link: [https://github.com/TheHenryWills/CountryWrangler](https://github.com/TheHenryWills/CountryWrangler)
 
