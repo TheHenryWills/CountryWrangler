@@ -192,8 +192,8 @@ Your donation helps support my work in creating high-quality content such as blo
 ## Acknowledgments
 
 * [phone_iso3166 - Map an E.164 (international) phone number to the ISO-3166-1 alpha 2](https://github.com/onlinecity/phone-iso3166)
-* [Inspired by pycountry](https://github.com/flyingcircusio/pycountry)
 * [Country names and codes based on world_countries by Stefan Gabos](https://stefangabos.github.io/world_countries/)
+* [Inspired by pycountry](https://github.com/flyingcircusio/pycountry)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
