@@ -56,9 +56,7 @@ Binary installers for the latest released version are available at the Python Pa
  pip install countrywrangler
  ```
  Output:
-  ```
- DE
-  ```
+
  
  
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -75,6 +73,10 @@ import countrywrangler as cw
 
 alpha2 = cw.Normalize.name_to_alpha2("Germany")
 print(alpha2)
+```
+Output:
+```
+DE
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
