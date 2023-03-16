@@ -98,6 +98,15 @@ See the [open issues](https://github.com/TheHenryWills/CountryWrangler/issues) f
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
+<!-- DONATIONS -->
+## Donations / Monetary Support
+Your donation helps support my work in creating high-quality content such as blog articles and tutorials, as well as maintaining my open-source projects. Every penny you donate goes directly towards these efforts, ensuring that these resources remain accessible and free for everyone who wants to learn.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
