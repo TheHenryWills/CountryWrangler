@@ -1,0 +1,11 @@
+sphinx>=4.0,<6.0
+sphinxcontrib-plantuml
+sphinx-needs
+matplotlib
+sphinx-copybutton
+sphinxcontrib-programoutput
+sphinx-design
+click
+tabulate
+sphinx-immaterial==0.11.2
+esbonio>=0.13.0
