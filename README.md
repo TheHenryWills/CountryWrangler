@@ -26,8 +26,6 @@ CountryWrangler is a Python library that simplifies the handling of country-rela
     <a href="https://countrywrangler.readthedocs.io/en/latest/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
     <a href="https://github.com/TheHenryWills/CountryWrangler/issues/new">Report Bug</a>
     ·
     <a href="https://github.com/TheHenryWills/CountryWrangler/issues/new">Request Feature</a>
