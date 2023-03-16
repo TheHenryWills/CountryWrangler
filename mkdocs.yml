@@ -1,1 +1,9 @@
 site_name: CountryWrangler Documentation
+repo_url: https://github.com/TheHenryWills/CountryWrangler/
+repo_name: GitHub
+edit_uri: edit/main/docs/
+site_description: A Python library that simplifies the handling of country-related data by converting country codes, names, TLDs, phone numbers, timezones, currencies, and languages to proper ISO 3166-1 Alpha2 codes.
+site_author: Henry Wills
+copyright: Copyright © 2023 Henry Wills
+
+theme: readthedocs
