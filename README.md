@@ -64,7 +64,12 @@ Binary installers for the latest released version are available at the Python Pa
 ## Usage
 
 ### Normalize Country Name to Alpha 2
+```python
+import countrywrangler as cw
 
+alpha2 = cw.Normalize.name_to_alpha2("Germany")
+print(alpha2)
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
