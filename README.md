@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 <!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -18,7 +20,7 @@
   <h3 align="center">CountryWrangler</h3>
 
   <p align="center">
-CountryWrangler is a Python library that simplifies the handling of country-related data by converting country codes, names, TLDs, phone numbers, timezones, currencies, and languages to proper ISO 3166-1 Alpha2 country codes. With CountryWrangler, you can easily standardize your data and make it consistent across your project. The library is designed for speed and efficiency, making it easy to process large datasets in no time. 
+CountryWrangler is a Python library that simplifies the handling of country-related data by converting country codes, names, TLDs, phone numbers, timezones, currencies, and languages to proper ISO 3166-1 Alpha-2 country codes. With CountryWrangler, you can easily standardize your data and make it consistent across your project. The library is designed for speed and efficiency, making it easy to process large datasets in no time. 
     <br />
     <br />
     <a href="https://countrywrangler.readthedocs.io/en/latest/"><strong>Explore the docs »</strong></a>
@@ -31,30 +33,6 @@ CountryWrangler is a Python library that simplifies the handling of country-rela
     <a href="https://github.com/TheHenryWills/CountryWrangler/issues/new">Request Feature</a>
   </p>
 </div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
 
 
 
@@ -77,13 +55,45 @@ Binary installers for the latest released version are available at the Python Pa
  ```sh
  pip install countrywrangler
  ```
+
+ 
+ 
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
  
  
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Basic Usage
+
+### Country Name to Alpha 2
+`name_to_alpha2` takes in a string and searches for a corresponding alpha-2 code in the database for both common and official country names in 34 different languages. If no match is found, `None` is returned.
+
+```python
+import countrywrangler as cw
+
+alpha2 = cw.Normalize.name_to_alpha2("Germany")
+print(alpha2)
+
+>>> DE
+```
+
+### Phone Number to Alpha 2
+`phone_to_alpha2` accepts a string or integer representing a phone number in international format (E.164) and returns the corresponding ISO-3166-1 alpha-2 country code of the phone number's origin. If the input is not a valid phone number, the function returns `None`.
+
+```python
+import countrywrangler as cw
+
+alpha2 = cw.Normalize.phone_to_alpha2("+1 (222) 333-4444 ")
+print(alpha2)
+
+>>> US
+```
+
+> **Warning**
+> Please ensure that the input provided is a valid phone number, as almost any numerical input can be matched to an alpha-2 country code. This function does not validate whether the input is a phone number.
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,15 +102,25 @@ Binary installers for the latest released version are available at the Python Pa
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Support language code to country
+- [ ] Support language code to to alpha2
 - [ ] Fuzzy lookup for country names
-- [ ] Support for subdivisions
-- [ ] Support for city to country
+- [ ] Support for subdivisions to alpha2
+- [ ] Support for city to to alpha2
 - [ ] Add more alternative country names
 
 See the [open issues](https://github.com/TheHenryWills/CountryWrangler/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- UPDATEPOLICY -->
+## Data Update Policy
+Updates to the ISO 3361 standards are monitored and immediately upon changes or additions.
+No changes to the data will be accepted into CountryWrangler unless it is plain simple wrong. 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- CONTRIBUTING -->
@@ -159,6 +179,13 @@ Project Link: [https://github.com/TheHenryWills/CountryWrangler](https://github.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- DONATIONS -->
+## Donations / Monetary Support
+Your donation helps support my work in creating high-quality content such as blog articles and tutorials, as well as maintaining my open-source projects. Every penny you donate goes directly towards these efforts, ensuring that these resources remain accessible and free for everyone.
+
+<a href='https://ko-fi.com/Z8Z5JJJ1X' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- ACKNOWLEDGMENTS -->
