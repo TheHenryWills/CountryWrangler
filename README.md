@@ -75,6 +75,7 @@ print(alpha2)
 
 >>> DE
 ```
+Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/country_name/
 
 ### Phone Number to Alpha 2
 `phone_to_alpha2` accepts a string or integer representing a phone number in international format (E.164) and returns the corresponding ISO-3166-1 alpha-2 country code of the phone number's origin. If the input is not a valid phone number, the function returns `None`.
