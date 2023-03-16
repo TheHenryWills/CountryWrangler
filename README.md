@@ -87,10 +87,10 @@ print(alpha2)
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Support language code to country
+- [ ] Support language code to to alpha2
 - [ ] Fuzzy lookup for country names
-- [ ] Support for subdivisions
-- [ ] Support for city to country
+- [ ] Support for subdivisions to alpha2
+- [ ] Support for city to to alpha2
 - [ ] Add more alternative country names
 
 See the [open issues](https://github.com/TheHenryWills/CountryWrangler/issues) for a full list of proposed features (and known issues).
