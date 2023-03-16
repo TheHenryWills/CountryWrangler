@@ -73,6 +73,8 @@ import countrywrangler as cw
 
 alpha2 = cw.Normalize.name_to_alpha2("Germany")
 print(alpha2)
+
+>>> DE
 ```
 Output:
 ```
