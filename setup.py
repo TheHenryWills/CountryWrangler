@@ -11,15 +11,15 @@ setup(
   url = 'https://github.com/TheHenryWills/CountryWrangler', 
   download_url = 'https://github.com/TheHenryWills/CountryWrangler/archive/refs/tags/v_002.tar.gz', 
   keywords = ['iso-3166', 'iso-3166-1 ', 'normalize', ' countries-data', 'country', 'data-normalization', 'data-cleaning'],  
-  install_requires=[            # I get to this in a second
+  install_requires=[           
           'phone_iso3166',
       ],
   classifiers=[
     'Development Status :: 5 - Production/Stable',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
-    'Intended Audience :: Developers',      # Define that your audience are developers
+    'Intended Audience :: Developers',     
     'Topic :: Software Development :: Build Tools',
     'License :: OSI Approved :: MIT License',   
-    'Programming Language :: Python :: 3',      #Specify which pyhton versions that you want to support
+    'Programming Language :: Python :: 3',     
     'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
