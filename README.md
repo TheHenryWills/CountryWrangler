@@ -99,6 +99,14 @@ See the [open issues](https://github.com/TheHenryWills/CountryWrangler/issues) f
 
 
 
+<!-- UPDATEPOLICY -->
+## Data Update Policy
+Updates to the ISO 3361 standards are monitored and immediately upon changes or additions.
+No changes to the data will be accepted into CountryWrangler unless it is plain simple wrong. 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 <!-- DONATIONS -->
 ## Donations / Monetary Support
 Your donation helps support my work in creating high-quality content such as blog articles and tutorials, as well as maintaining my open-source projects. Every penny you donate goes directly towards these efforts, ensuring that these resources remain accessible and free for everyone who wants to learn.
