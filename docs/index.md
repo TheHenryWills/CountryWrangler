@@ -1,17 +1,22 @@
 # About CountryWrangler
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+CountryWrangler is a Python library that simplifies the handling of country-related data by converting country codes, names, TLDs, phone numbers, timezones, currencies, and languages to proper ISO 3166-1 Alpha2 country codes. With CountryWrangler, you can easily standardize your data and make it consistent across your project. The library is designed for speed and efficiency, making it easy to process large datasets in no time.
 
-## Commands
+## Get started
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+```sh
+pip install countrywrangler
+```
 
-## Project layout
+## Data Update Policy
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Updates to the ISO 3361 standards are monitored and immediately upon changes or additions.
+No changes to the data will be accepted into CountryWrangler unless it is plain simple wrong. 
+
+## Donations / Monetary Support
+Your donation helps support my work in creating high-quality content such as blog articles and tutorials, as well as maintaining my open-source projects. Every penny you donate goes directly towards these efforts, ensuring that these resources remain accessible and free for everyone.
+
+<a href='https://ko-fi.com/Z8Z5JJJ1X' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+
+

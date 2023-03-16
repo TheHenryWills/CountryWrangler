@@ -19,6 +19,8 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 '''
 
+from phone_iso3166.country import *
+
 from countrywrangler.databases.names import CountryNames
 
 
@@ -43,4 +45,16 @@ class Normalize:
         if text in names:
             return names[text]
         else:
+            return None
+        
+
+    def phone_to_alpha2(phone: typing.Union[str, int]) -> str:
+        # Immediately returns None if provided string is empty   
+        if not phone:
+            return None
+        # Lookup alpha2 using phone-iso3166 lib
+        try:
+            alpha_2 = phone_country(phone)
+            return alpha_2
+        except Exception as err:
             return None
