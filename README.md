@@ -61,7 +61,7 @@ Binary installers for the latest released version are available at the Python Pa
  
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Basic Usage
 
 ### Normalize Country Name to Alpha 2
 ```python
