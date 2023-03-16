@@ -67,7 +67,7 @@ Binary installers for the latest released version are available at the Python Pa
 ## Basic Usage
 
 ### Country Name to Alpha 2
-The `name_to_alpha2` function takes in a string and searches for a corresponding Alpha 2 code in the database for both common and official country names in 34 different languages. If no match is found, `None` is returned.
+`name_to_alpha2` takes in a string and searches for a corresponding Alpha 2 code in the database for both common and official country names in 34 different languages. If no match is found, `None` is returned.
 
 ```python
 import countrywrangler as cw
