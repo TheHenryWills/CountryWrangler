@@ -55,7 +55,6 @@ Binary installers for the latest released version are available at the Python Pa
  ```sh
  pip install countrywrangler
  ```
- Output:
 
  
  
