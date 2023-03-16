@@ -125,7 +125,7 @@ Don't forget to give the project a star! Thanks you!
 
 CountryWrangler is Open Source and distributed under the MIT License.
 
-Copyright (c) 2023 Henry Wills
+Copyright (c) 2023 Henry Wills - https://linktr.ee/thehenrywills
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
