@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/TheHenryWills/CountryWrangler">
-    <img src="assets/logo.png" alt="Logo">
+    <img src="https://github.com/TheHenryWills/CountryWrangler/blob/main/assets/logo.png?raw=true" alt="Logo">
   </a>
 
   <h3 align="center">CountryWrangler</h3>
