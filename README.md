@@ -85,6 +85,9 @@ Binary installers for the latest released version are available at the Python Pa
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+### Normalize Country Name to Alpha 2
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
