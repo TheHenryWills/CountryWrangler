@@ -76,10 +76,8 @@ print(alpha2)
 
 >>> DE
 ```
-Output:
-```
-DE
-```
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
