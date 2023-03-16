@@ -1,11 +1,5 @@
 from distutils.core import run_setup
 
-project_urls = {
-  'Documentation': 'https://countrywrangler.readthedocs.io/en/latest/',
-  'Linktree': 'https://linktr.ee/thehenrywills'
-}
-
-
 
 setup(
   name = 'countrywrangler',        
@@ -34,5 +28,8 @@ setup(
     'Programming Language :: Python :: 3.8',
     'Programming Language :: Python :: 3.9',
   ],
-  project_urls = project_urls,
+  project_urls = {
+  'Documentation': 'https://countrywrangler.readthedocs.io/en/latest/',
+  'Linktree': 'https://linktr.ee/thehenrywills',
+    },
 )
