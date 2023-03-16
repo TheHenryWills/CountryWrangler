@@ -28,7 +28,7 @@ class Normalize:
         '''
         This function searches for a corresponding Alpha 2 code in the database for 
         both common and official country names in different languages. If no match 
-        is found, None is returned.
+        is found, None is returned. 
 
         Documentation and useage examples:
         https://countrywrangler.readthedocs.io/en/latest/normalize/#country-name
