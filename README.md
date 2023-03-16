@@ -20,7 +20,7 @@
   <h3 align="center">CountryWrangler</h3>
 
   <p align="center">
-CountryWrangler is a Python library that simplifies the handling of country-related data by converting country codes, names, TLDs, phone numbers, timezones, currencies, and languages to proper ISO 3166-1 Alpha2 country codes. With CountryWrangler, you can easily standardize your data and make it consistent across your project. The library is designed for speed and efficiency, making it easy to process large datasets in no time. 
+CountryWrangler is a Python library that simplifies the handling of country-related data by converting country codes, names, TLDs, phone numbers, timezones, currencies, and languages to proper ISO 3166-1 Alpha-2 country codes. With CountryWrangler, you can easily standardize your data and make it consistent across your project. The library is designed for speed and efficiency, making it easy to process large datasets in no time. 
     <br />
     <br />
     <a href="https://countrywrangler.readthedocs.io/en/latest/"><strong>Explore the docs »</strong></a>
@@ -67,7 +67,7 @@ Binary installers for the latest released version are available at the Python Pa
 ## Basic Usage
 
 ### Country Name to Alpha 2
-`name_to_alpha2` takes in a string and searches for a corresponding Alpha 2 code in the database for both common and official country names in 34 different languages. If no match is found, `None` is returned.
+`name_to_alpha2` takes in a string and searches for a corresponding alpha-2 code in the database for both common and official country names in 34 different languages. If no match is found, `None` is returned.
 
 ```python
 import countrywrangler as cw
@@ -82,7 +82,7 @@ print(alpha2)
 `phone_to_alpha2` accepts a string or integer representing a phone number in international format (E.164) and returns the corresponding ISO-3166-1 alpha-2 country code of the phone number's origin. If the input is not a valid phone number, the function returns `None`.
 
 > **Warning**
-> Please ensure that the input provided is a valid phone number, as almost any numerical input can be matched to an alpha 2 country code. This function does not validate whether the input is a phone number.
+> Please ensure that the input provided is a valid phone number, as almost any numerical input can be matched to an alpha-2 country code. This function does not validate whether the input is a phone number.
 
 
 ```python
