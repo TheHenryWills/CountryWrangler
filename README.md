@@ -93,6 +93,7 @@ Binary installers for the latest released version are available at the Python Pa
 ## Roadmap
 
 - [ ] Support language code to country
+- [ ] Fuzzy lookup for country names
 - [ ] Add more alternative country names
 
 See the [open issues](https://github.com/TheHenryWills/CountryWrangler/issues) for a full list of proposed features (and known issues).
