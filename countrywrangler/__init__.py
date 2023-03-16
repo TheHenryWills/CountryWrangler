@@ -20,7 +20,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 '''
 
 from countrywrangler.normalize import Normalize
-from databases.names import CountryNames
+from countrywrangler.databases.names import CountryNames
 
 
 
