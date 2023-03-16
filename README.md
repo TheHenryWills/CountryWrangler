@@ -18,7 +18,7 @@
   <h3 align="center">CountryWrangler</h3>
 
   <p align="center">
-CountryWrangler is a powerful Python library that simplifies the handling of country-related data by converting country codes, names, TLDs, phone numbers, timezones, currencies, and languages to proper ISO 3166-1 Alpha2 country codes. With CountryWrangler, you can easily standardize your data and make it consistent across your project. The library is designed for speed and efficiency, making it easy to process large datasets in no time. 
+CountryWrangler is a Python library that simplifies the handling of country-related data by converting country codes, names, TLDs, phone numbers, timezones, currencies, and languages to proper ISO 3166-1 Alpha2 country codes. With CountryWrangler, you can easily standardize your data and make it consistent across your project. The library is designed for speed and efficiency, making it easy to process large datasets in no time. 
     <br />
     <br />
     <a href="https://countrywrangler.readthedocs.io/en/latest/"><strong>Explore the docs »</strong></a>
@@ -93,6 +93,9 @@ Binary installers for the latest released version are available at the Python Pa
 ## Roadmap
 
 - [ ] Support language code to country
+- [ ] Fuzzy lookup for country names
+- [ ] Support for subdivisions
+- [ ] Support for city to country
 - [ ] Add more alternative country names
 
 See the [open issues](https://github.com/TheHenryWills/CountryWrangler/issues) for a full list of proposed features (and known issues).
@@ -122,7 +125,7 @@ Don't forget to give the project a star! Thanks you!
 
 CountryWrangler is Open Source and distributed under the MIT License.
 
-Copyright (c) 2023 Henry Wills
+Copyright (c) 2023 Henry Wills - https://linktr.ee/thehenrywills
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
