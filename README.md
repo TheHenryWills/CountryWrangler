@@ -78,6 +78,16 @@ print(alpha2)
 >>> DE
 ```
 
+### Phone Number to Alpha 2
+```python
+import countrywrangler as cw
+
+alpha2 = cw.Normalize.phone_to_alpha2("+1 (222) 333-4444 ")
+print(alpha2)
+
+>>> US
+```
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
