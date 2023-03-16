@@ -107,15 +107,6 @@ No changes to the data will be accepted into CountryWrangler unless it is plain 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- DONATIONS -->
-## Donations / Monetary Support
-Your donation helps support my work in creating high-quality content such as blog articles and tutorials, as well as maintaining my open-source projects. Every penny you donate goes directly towards these efforts, ensuring that these resources remain accessible and free for everyone who wants to learn.
-
-<a href='https://ko-fi.com/Z8Z5JJJ1X' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -173,6 +164,13 @@ Project Link: [https://github.com/TheHenryWills/CountryWrangler](https://github.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- DONATIONS -->
+## Donations / Monetary Support
+Your donation helps support my work in creating high-quality content such as blog articles and tutorials, as well as maintaining my open-source projects. Every penny you donate goes directly towards these efforts, ensuring that these resources remain accessible and free for everyone who wants to learn.
+
+<a href='https://ko-fi.com/Z8Z5JJJ1X' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- ACKNOWLEDGMENTS -->
