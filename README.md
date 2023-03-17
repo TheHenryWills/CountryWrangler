@@ -134,7 +134,7 @@ See the [open issues](https://github.com/TheHenryWills/CountryWrangler/issues) f
 
 <!-- UPDATEPOLICY -->
 ## Data Update Policy
-Updates to the ISO 3361 standards are monitored and immediately upon changes or additions.
+Updates to the ISO 3361 standards are monitored and immediately added upon changes or additions.
 No changes to the data will be accepted into CountryWrangler unless it is plain simple wrong. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
