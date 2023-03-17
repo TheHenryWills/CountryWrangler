@@ -109,7 +109,7 @@ alpha2 = cw.Normalize.tld_to_alpha2(".co.uk")
 print(alpha2)
 
 >>> GB
-
+```
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
