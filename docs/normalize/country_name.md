@@ -2,9 +2,21 @@
 
 `name_to_alpha2` takes in a string and searches for a corresponding alpha-2 code in the database for both common and official country names in 34 different languages. If no match is found, `None` is returned. 
 
-## Usage
+## Usage Example
+
 
 ``` py title="Basic Usage", linenums="1", hl_lines="3"
+import countrywrangler as cw
+
+alpha2 = cw.Normalize.name_to_alpha2("Germany")
+print(alpha2)
+
+>>> DE
+
+```
+
+
+``` py title="Different Inputs", linenums="1"
 import countrywrangler as cw
 
 print(cw.Normalize.name_to_alpha2("Germany"))
