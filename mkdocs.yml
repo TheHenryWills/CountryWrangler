@@ -1,0 +1,67 @@
+site_name: CountryWrangler Documentation
+repo_url: https://github.com/TheHenryWills/CountryWrangler/
+repo_name: GitHub
+edit_uri: edit/main/docs/
+site_description: A Python library that simplifies the handling of country-related data by converting country codes, names, TLDs, phone numbers, timezones, currencies, and languages to proper ISO 3166-1 Alpha2 codes.
+site_author: Henry Wills
+copyright: Copyright © 2023 Henry Wills
+
+theme: 
+    name: material
+    logo: assets/logo.png
+    favicon: assets/favicon.ico
+    features:
+      - content.code.copy
+      - content.code.select
+      - content.code.annotate
+      - navigation.instant
+      - navigation.tracking
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.sections
+      - navigation.expand
+      - navigation.path
+      - toc.integrate 
+      - navigation.top
+      - navigation.footer
+    icon:
+      repo: fontawesome/brands/github
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe 
+      link: https://linktr.ee/thehenrywills
+    - icon: fontawesome/brands/linkedin 
+      link: https://www.linkedin.com/in/henry-wills/
+    - icon: fontawesome/brands/medium 
+      link: https://medium.com/@thehenrywills
+    - icon: fontawesome/brands/twitter 
+      link: https://twitter.com/TheHenryWills
+    - icon: fontawesome/brands/instagram 
+      link: https://www.instagram.com/thehenrywills/   
+  generator: false
