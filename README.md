@@ -97,6 +97,7 @@ print(alpha2)
 > Please ensure that the input provided is a valid phone number, as almost any numerical input can be matched to an alpha-2 country code. This function does not validate whether the input is a phone number.
 
 
+
 ### TLD to Alpha 2
 tld_to_alpha2 retrieves the country code associated with a given Top-Level Domain (TLD). If a match is found, the function returns the country code in ISO-3166-1 alpha-2 format. Otherwise, it returns None.
 
