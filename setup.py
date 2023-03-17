@@ -18,7 +18,7 @@ setup(
   author = 'Henry Wills',                   
   author_email = 'hello@henrywills.com',      
   url = 'https://github.com/TheHenryWills/CountryWrangler', 
-  download_url = 'https://github.com/TheHenryWills/CountryWrangler/archive/refs/tags/v_015.tar.gz', 
+  download_url = 'https://github.com/TheHenryWills/CountryWrangler/archive/refs/tags/v_0.1.5.tar.gz', 
   keywords = ['iso-3166', 'iso-3166-1 ', 'normalize', ' countries-data', 'country', 'data-normalization', 'data-cleaning'],  
   install_requires=[           
           'phone_iso3166',
