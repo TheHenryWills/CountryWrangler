@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+countrywrangler/__init__.py
+countrywrangler/normalize.py
+countrywrangler.egg-info/PKG-INFO
+countrywrangler.egg-info/SOURCES.txt
+countrywrangler.egg-info/dependency_links.txt
+countrywrangler.egg-info/requires.txt
+countrywrangler.egg-info/top_level.txt
+countrywrangler/databases/__init__.py
+countrywrangler/databases/names.py
