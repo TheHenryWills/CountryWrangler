@@ -26,8 +26,6 @@ CountryWrangler is a Python library that simplifies the handling of country-rela
     <a href="https://countrywrangler.readthedocs.io/en/latest/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
     <a href="https://github.com/TheHenryWills/CountryWrangler/issues/new">Report Bug</a>
     ·
     <a href="https://github.com/TheHenryWills/CountryWrangler/issues/new">Request Feature</a>
@@ -69,6 +67,8 @@ Binary installers for the latest released version are available at the Python Pa
 ### Country Name to Alpha 2
 `name_to_alpha2` takes in a string and searches for a corresponding alpha-2 code in the database for both common and official country names in 34 different languages. If no match is found, `None` is returned.
 
+Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/country_name/
+
 ```python
 import countrywrangler as cw
 
@@ -78,8 +78,14 @@ print(alpha2)
 >>> DE
 ```
 
+
 ### Phone Number to Alpha 2
 `phone_to_alpha2` accepts a string or integer representing a phone number in international format (E.164) and returns the corresponding ISO-3166-1 alpha-2 country code of the phone number's origin. If the input is not a valid phone number, the function returns `None`.
+
+Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/phone/
+
+> **Warning**
+> Please ensure that the input provided is a valid phone number, as almost any numerical input can be matched to an alpha-2 country code. This function does not validate whether the input is a phone number.
 
 ```python
 import countrywrangler as cw
@@ -90,9 +96,21 @@ print(alpha2)
 >>> US
 ```
 
-> **Warning**
-> Please ensure that the input provided is a valid phone number, as almost any numerical input can be matched to an alpha-2 country code. This function does not validate whether the input is a phone number.
 
+
+### TLD to Alpha 2
+tld_to_alpha2 retrieves the country code associated with a given Top-Level Domain (TLD). If a match is found, the function returns the country code in ISO-3166-1 alpha-2 format. Otherwise, it returns None.
+
+Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/tld/
+
+```python
+import countrywrangler as cw
+
+alpha2 = cw.Normalize.tld_to_alpha2(".co.uk")
+print(alpha2)
+
+>>> GB
+```
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -191,8 +209,9 @@ Your donation helps support my work in creating high-quality content such as blo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Inspired by pycountry](https://github.com/flyingcircusio/pycountry)
+* [phone_iso3166 - Map an E.164 (international) phone number to the ISO-3166-1 alpha 2](https://github.com/onlinecity/phone-iso3166)
 * [Country names and codes based on world_countries by Stefan Gabos](https://stefangabos.github.io/world_countries/)
+* [Inspired by pycountry](https://github.com/flyingcircusio/pycountry)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
