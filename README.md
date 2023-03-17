@@ -84,6 +84,9 @@ print(alpha2)
 
 Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/phone/
 
+> **Warning**
+> Please ensure that the input provided is a valid phone number, as almost any numerical input can be matched to an alpha-2 country code. This function does not validate whether the input is a phone number.
+
 ```python
 import countrywrangler as cw
 
@@ -92,9 +95,6 @@ print(alpha2)
 
 >>> US
 ```
-
-> **Warning**
-> Please ensure that the input provided is a valid phone number, as almost any numerical input can be matched to an alpha-2 country code. This function does not validate whether the input is a phone number.
 
 
 
