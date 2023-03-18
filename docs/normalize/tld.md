@@ -6,10 +6,6 @@
 
     Although Top-Level Domains (TLDs) appear to be straightforward as they consist of only Alpha-2 codes, there are exceptions to this rule. For example, the TLD for the United Kingdom is `.uk`, while the corresponding ISO-3361-1 Alpha-2 code is `GB`. ISO codes `BV`, `BL`, `MF`, `SJ`, `GB`, and `UM` are not used for country code top-level domains. Additionally, there are numerous geographic top-level domains, such as `.london`, `.berlin`, and `.wien`, which CountryWrangler supports (although this feature can be optionally turned off).
 
-!!! warning "Does not process full domain names!"
-
-    This function only operates on Top-Level Domains (TLDs) like `.co.uk` and does not process full domain names such as `hotmail.co.uk`. To use this function with a full domain name, you must first extract the TLD using URLWrangler.
-
 
 ## Usage Example
 

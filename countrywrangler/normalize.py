@@ -123,28 +123,27 @@ class Normalize:
         if not text:
             return None
         # Parse kwargs option and set up default settings
-        if not "upper_only " in kwargs:
+        if not "upper_only" in kwargs:
             upper_only = False # Default value
         else:
             if isinstance(kwargs["upper_only"], bool):
                 upper_only  = kwargs["upper_only"]
             else:
-                msg = "Option Error! upper_only  option expects bool not " + str(type(kwargs["upper_only "]))
+                msg = "Option Error! upper_only option expects bool not " + str(type(kwargs["upper_only"]))
                 raise TypeError(msg) 
         # Parse kwargs option and set up default settings
         if not "allow_uk " in kwargs:
             allow_uk = True # Default value
         else:
             if isinstance(kwargs["allow_uk"], bool):
-                allow_uk  = kwargs["allow_uk"]
+                allow_uk = kwargs["allow_uk"]
             else:
-                msg = "Option Error! allow_uk  option expects bool not " + str(type(kwargs["allow_uk "]))
+                msg = "Option Error! allow_uk option expects bool not " + str(type(kwargs["allow_uk"]))
                 raise TypeError(msg)
         # Convert to upper case according to database records and remove whitespace
         if upper_only:
             text = text.strip()
         else:
-            # Only codes in upper case will be matched
             text = text.upper().strip()
         # Check if string is UK and convert it to GB if it is and option is set to True
         if allow_uk and text == "UK":
