@@ -37,7 +37,7 @@ CountryWrangler is a Python library that simplifies the handling of country-rela
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-CountryWrangler is a high-performance Python library that has taken inspiration from `pycountry` and has surpassed it in terms of speed. With CountryWrangler, converting an Alpha3 to an Alpha2 (USA -> US) country code takes a mere 8900 nanoseconds, while the same conversion with `pycountry` on an Intel i7-10700K CPU @ 3.80GHz takes 282.636.700 nanoseconds. 
+CountryWrangler is a high-performance Python library that has taken inspiration from `pycountry` and has surpassed it in terms of speed. With CountryWrangler, converting an Alpha-3 to an Alpha-2 (USA -> US) country code takes a mere 8900 nanoseconds, while the same conversion with `pycountry` on an Intel i7-10700K CPU @ 3.80GHz takes 282.636.700 nanoseconds. 
 
 While `pycountry` is primarily designed to serve as a database for ISO standards, CountryWrangler is specifically developed to normalize country data. Both libraries cater to their respective use cases. Additionally, CountryWrangler offers extra functions that are designed to handle messy country data with ease.
 
@@ -64,7 +64,7 @@ Binary installers for the latest released version are available at the Python Pa
 <!-- USAGE EXAMPLES -->
 ## Basic Usage
 
-### Country Name to Alpha 2
+### Country Name to Alpha-2
 `name_to_alpha2` takes in a string and searches for a corresponding alpha-2 code in the database for both common and official country names in 34 different languages. If no match is found, `None` is returned.
 
 Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/country_name/
@@ -79,13 +79,13 @@ print(alpha2)
 ```
 
 
-### Phone Number to Alpha 2
+### Phone Number to Alpha-2
 `phone_to_alpha2` accepts a string or integer representing a phone number in international format (E.164) and returns the corresponding ISO-3166-1 alpha-2 country code of the phone number's origin. If the input is not a valid phone number, the function returns `None`.
-
-Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/phone/
 
 > **Warning**
 > Please ensure that the input provided is a valid phone number, as almost any numerical input can be matched to an alpha-2 country code. This function does not validate whether the input is a phone number.
+
+Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/phone/
 
 ```python
 import countrywrangler as cw
@@ -98,8 +98,11 @@ print(alpha2)
 
 
 
-### TLD to Alpha 2
-tld_to_alpha2 retrieves the country code associated with a given Top-Level Domain (TLD). If a match is found, the function returns the country code in ISO-3166-1 alpha-2 format. Otherwise, it returns None.
+### TLD to Alpha-2
+`tld_to_alpha2` retrieves the country code associated with a given Top-Level Domain (TLD). If a match is found, the function returns the country code in ISO-3166-1 alpha-2 format. Otherwise, it returns None.
+
+> **Warning**
+> This function only operates on Top-Level Domains (TLDs) like .co.uk and does not process full domain names such as hotmail.co.uk. 
 
 Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/tld/
 
@@ -111,6 +114,22 @@ print(alpha2)
 
 >>> GB
 ```
+
+### Country code to Alpha-2
+`code_to_alpha2` converts both alpha-3 and alpha-2 codes to alpha-2 format, and returning None in the absence of a match.
+This can also be used to validate if a given string is a country code.
+
+Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/country_code/
+
+```python
+import countrywrangler as cw
+
+alpha2 = cw.Normalize.code_to_alpha2("GBR")
+print(alpha2)
+
+>>> GB
+```
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
