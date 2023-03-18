@@ -99,7 +99,7 @@ print(alpha2)
 
 
 ### TLD to Alpha-2
-tld_to_alpha2 retrieves the country code associated with a given Top-Level Domain (TLD). If a match is found, the function returns the country code in ISO-3166-1 alpha-2 format. Otherwise, it returns None.
+`tld_to_alpha2` retrieves the country code associated with a given Top-Level Domain (TLD). If a match is found, the function returns the country code in ISO-3166-1 alpha-2 format. Otherwise, it returns None.
 
 > **Warning**
 > This function only operates on Top-Level Domains (TLDs) like .co.uk and does not process full domain names such as hotmail.co.uk. 
