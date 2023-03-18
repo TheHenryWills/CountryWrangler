@@ -116,7 +116,19 @@ print(alpha2)
 ```
 
 ### Country code to Alpha-2
+`code_to_alpha2` converts both alpha-3 and alpha-2 codes to alpha-2 format, and returning None in the absence of a match.
+This can also be used to validate if a given string is a country code.
 
+Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/country_code/
+
+```python
+import countrywrangler as cw
+
+alpha2 = cw.Normalize.code_to_alpha2("GBR")
+print(alpha2)
+
+>>> GB
+```
 
 
 
