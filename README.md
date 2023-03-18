@@ -64,7 +64,7 @@ Binary installers for the latest released version are available at the Python Pa
 <!-- USAGE EXAMPLES -->
 ## Basic Usage
 
-### Country Name to Alpha 2
+### Country Name to Alpha-2
 `name_to_alpha2` takes in a string and searches for a corresponding alpha-2 code in the database for both common and official country names in 34 different languages. If no match is found, `None` is returned.
 
 Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/country_name/
@@ -79,7 +79,7 @@ print(alpha2)
 ```
 
 
-### Phone Number to Alpha 2
+### Phone Number to Alpha-2
 `phone_to_alpha2` accepts a string or integer representing a phone number in international format (E.164) and returns the corresponding ISO-3166-1 alpha-2 country code of the phone number's origin. If the input is not a valid phone number, the function returns `None`.
 
 > **Warning**
@@ -98,7 +98,7 @@ print(alpha2)
 
 
 
-### TLD to Alpha 2
+### TLD to Alpha-2
 tld_to_alpha2 retrieves the country code associated with a given Top-Level Domain (TLD). If a match is found, the function returns the country code in ISO-3166-1 alpha-2 format. Otherwise, it returns None.
 
 > **Warning**
