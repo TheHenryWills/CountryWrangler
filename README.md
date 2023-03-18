@@ -162,8 +162,8 @@ print(alpha2)
 <!-- ROADMAP -->
 ## Roadmap
 
+- [x] Fuzzy lookup for country names
 - [ ] Support language code to to alpha2
-- [ ] Fuzzy lookup for country names
 - [ ] Support for subdivisions to alpha2
 - [ ] Support for city to to alpha2
 - [ ] Add more alternative country names
