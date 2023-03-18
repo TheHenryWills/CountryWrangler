@@ -163,6 +163,7 @@ print(alpha2)
 ## Roadmap
 
 - [x] Fuzzy lookup for country names
+- [ ] Option to exclude languages from country name matching
 - [ ] Support language code to to alpha2
 - [ ] Support for subdivisions to alpha2
 - [ ] Support for city to to alpha2
