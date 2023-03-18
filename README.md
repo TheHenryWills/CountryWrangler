@@ -78,7 +78,7 @@ print(alpha2)
 >>> DE
 ```
 
-Enabling fuzzy lookup by passing `use_fuzzy=True` option virtually all variations of country names can be captured and matched. Although using fuzzy lookup may incur a significant performance cost of approximately 100x slower than the normal lookup.
+The `use_fuzzy=True` option captures and matches virtually all variations of country names. Although using fuzzy lookup may incur a significant performance cost of approximately 100x slower than the normal lookup.
 
 ```python
 import countrywrangler as cw
