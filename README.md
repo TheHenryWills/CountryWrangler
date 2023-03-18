@@ -115,6 +115,10 @@ print(alpha2)
 >>> GB
 ```
 
+### Country code to Alpha-2
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
