@@ -132,7 +132,7 @@ class Normalize:
                 msg = "Option Error! upper_only option expects bool not " + str(type(kwargs["upper_only"]))
                 raise TypeError(msg) 
         # Parse kwargs option and set up default settings
-        if not "allow_uk " in kwargs:
+        if not "allow_uk" in kwargs:
             allow_uk = True # Default value
         else:
             if isinstance(kwargs["allow_uk"], bool):
