@@ -70,93 +70,93 @@ class Normalize:
             return None
         
 
-def tld_to_alpha2(tld: str, **kwargs) -> str:
-    """This function retrieves the country code associated with 
-    a given Top-Level Domain (TLD). If a match is found, the function returns the 
-    country code in ISO-3166-1 alpha-2 format. Otherwise, it returns None.
+    def tld_to_alpha2(tld: str, **kwargs) -> str:
+        """This function retrieves the country code associated with 
+        a given Top-Level Domain (TLD). If a match is found, the function returns the 
+        country code in ISO-3166-1 alpha-2 format. Otherwise, it returns None.
 
-    Documentation and useage examples:
-    https://countrywrangler.readthedocs.io/en/latest/normalize/tld/
-    """
-    # Immediately returns None if provided string is empty   
-    if not tld:
-        return None
-    # Parse kwargs option and set up default settings
-    if not "include_geo" in kwargs:
-        include_geo = True # Default value
-    else:
-        if isinstance(kwargs["include_geo"], bool):
-            include_geo = kwargs["include_geo"]
+        Documentation and useage examples:
+        https://countrywrangler.readthedocs.io/en/latest/normalize/tld/
+        """
+        # Immediately returns None if provided string is empty   
+        if not tld:
+            return None
+        # Parse kwargs option and set up default settings
+        if not "include_geo" in kwargs:
+            include_geo = True # Default value
         else:
-            msg = "Option Error! include_geo option expects bool not " + str(type(kwargs["include_geo"]))
-            raise TypeError(msg)
-    # Load chosen database
-    if include_geo:
-        ccTLDs = TLDMappings.allTLDs()
-    else:
-        ccTLDs = TLDMappings.ccTLDs()
-
-    # The provided string is cleaned up by stripping any whitespace and converting it to lowercase. 
-    # This is necessary because the database items are stored in lowercase format. Additionally, 
-    # the provided string may not necessarily be a ccTLD/gTLD, but could instead be a full suffix 
-    # such as ".co.uk". In such cases, it is necessary to isolate the ccTLD/gTLD and remove any 
-    # extraneous dots.
-    tld = tld.strip().lower().split(".")[-1]
-
-    # Lookup if match can be found in database and return result.
-    if tld in ccTLDs:
-        alpha_2 = ccTLDs[tld]
-    else:
-        alpha_2 = None
-    return alpha_2
-
-
-def code_to_alpha2(text: str, **kwargs) -> str:
-    """ Straightforward approach to convert alpha-3 and alpha-2 codes to alpha-2 format, 
-    returning None in the absence of a match.
-
-    Although `UK` for United Kingdom is not an ISO alpha-2 code it's misuse is common practice. 
-    CountryWrangler automatically converts `UK` to `GB`. This behavior can be disabled by setting 
-    the optional parameter `allow_uk=False`.
-    """    
-    # Immediately returns None if provided string is empty   
-    if not text:
-        return None
-    # Parse kwargs option and set up default settings
-    if not "upper_only " in kwargs:
-        upper_only = False # Default value
-    else:
-        if isinstance(kwargs["upper_only"], bool):
-            upper_only  = kwargs["upper_only"]
+            if isinstance(kwargs["include_geo"], bool):
+                include_geo = kwargs["include_geo"]
+            else:
+                msg = "Option Error! include_geo option expects bool not " + str(type(kwargs["include_geo"]))
+                raise TypeError(msg)
+        # Load chosen database
+        if include_geo:
+            ccTLDs = TLDMappings.allTLDs()
         else:
-            msg = "Option Error! upper_only  option expects bool not " + str(type(kwargs["upper_only "]))
-            raise TypeError(msg) 
-    # Parse kwargs option and set up default settings
-    if not "allow_uk " in kwargs:
-        allow_uk = True # Default value
-    else:
-        if isinstance(kwargs["allow_uk"], bool):
-            allow_uk  = kwargs["allow_uk"]
+            ccTLDs = TLDMappings.ccTLDs()
+
+        # The provided string is cleaned up by stripping any whitespace and converting it to lowercase. 
+        # This is necessary because the database items are stored in lowercase format. Additionally, 
+        # the provided string may not necessarily be a ccTLD/gTLD, but could instead be a full suffix 
+        # such as ".co.uk". In such cases, it is necessary to isolate the ccTLD/gTLD and remove any 
+        # extraneous dots.
+        tld = tld.strip().lower().split(".")[-1]
+
+        # Lookup if match can be found in database and return result.
+        if tld in ccTLDs:
+            alpha_2 = ccTLDs[tld]
         else:
-            msg = "Option Error! allow_uk  option expects bool not " + str(type(kwargs["allow_uk "]))
-            raise TypeError(msg)
-    # Convert to upper case according to database records and remove whitespace
-    if upper_only:
-        text = text.strip()
-    else:
-        # Only codes in upper case will be matched
-        text = text.upper().strip()
-    # Check if string is UK and convert it to GB if it is and option is set to True
-    if allow_uk and text == "UK":
-        return "GB"
-    # Return early if text can't possibly not be an alpha_3 nor an alpah_2 country code
-    if not range(2,3):
-        return None
-    # Database lookup
-    codes = CodeMappings.codes()
-    if text in codes:
-        return codes[text]
-    else:
-        return None
+            alpha_2 = None
+        return alpha_2
+
+
+    def code_to_alpha2(text: str, **kwargs) -> str:
+        """ Straightforward approach to convert alpha-3 and alpha-2 codes to alpha-2 format, 
+        returning None in the absence of a match.
+
+        Although `UK` for United Kingdom is not an ISO alpha-2 code it's misuse is common practice. 
+        CountryWrangler automatically converts `UK` to `GB`. This behavior can be disabled by setting 
+        the optional parameter `allow_uk=False`.
+        """    
+        # Immediately returns None if provided string is empty   
+        if not text:
+            return None
+        # Parse kwargs option and set up default settings
+        if not "upper_only " in kwargs:
+            upper_only = False # Default value
+        else:
+            if isinstance(kwargs["upper_only"], bool):
+                upper_only  = kwargs["upper_only"]
+            else:
+                msg = "Option Error! upper_only  option expects bool not " + str(type(kwargs["upper_only "]))
+                raise TypeError(msg) 
+        # Parse kwargs option and set up default settings
+        if not "allow_uk " in kwargs:
+            allow_uk = True # Default value
+        else:
+            if isinstance(kwargs["allow_uk"], bool):
+                allow_uk  = kwargs["allow_uk"]
+            else:
+                msg = "Option Error! allow_uk  option expects bool not " + str(type(kwargs["allow_uk "]))
+                raise TypeError(msg)
+        # Convert to upper case according to database records and remove whitespace
+        if upper_only:
+            text = text.strip()
+        else:
+            # Only codes in upper case will be matched
+            text = text.upper().strip()
+        # Check if string is UK and convert it to GB if it is and option is set to True
+        if allow_uk and text == "UK":
+            return "GB"
+        # Return early if text can't possibly not be an alpha_3 nor an alpah_2 country code
+        if not range(2,3):
+            return None
+        # Database lookup
+        codes = CodeMappings.codes()
+        if text in codes:
+            return codes[text]
+        else:
+            return None
 
 
