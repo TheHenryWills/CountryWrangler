@@ -78,6 +78,18 @@ print(alpha2)
 >>> DE
 ```
 
+Enabling fuzzy lookup by passing `use_fuzzy=True` option virtually all variations of country names can be captured and matched. Although using fuzzy lookup may incur a significant performance cost of approximately 100x slower than the normal lookup.
+
+```python
+import countrywrangler as cw
+
+alpha2 = cw.Normalize.name_to_alpha2("Germany Federal Republic of", use_fuzzy=True)
+print(alpha2)
+
+>>> DE
+```
+
+
 ### Country code to Alpha-2
 `code_to_alpha2` converts both alpha-3 and alpha-2 codes to alpha-2 format, and returning None in the absence of a match.
 This can also be used to validate if a given string is a country code.
