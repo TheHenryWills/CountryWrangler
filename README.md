@@ -37,7 +37,7 @@ CountryWrangler is a Python library that simplifies the handling of country-rela
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-CountryWrangler is a high-performance Python library that has taken inspiration from `pycountry` and has surpassed it in terms of speed. With CountryWrangler, converting an Alpha3 to an Alpha2 (USA -> US) country code takes a mere 8900 nanoseconds, while the same conversion with `pycountry` on an Intel i7-10700K CPU @ 3.80GHz takes 282.636.700 nanoseconds. 
+CountryWrangler is a high-performance Python library that has taken inspiration from `pycountry` and has surpassed it in terms of speed. With CountryWrangler, converting an Alpha-3 to an Alpha-2 (USA -> US) country code takes a mere 8900 nanoseconds, while the same conversion with `pycountry` on an Intel i7-10700K CPU @ 3.80GHz takes 282.636.700 nanoseconds. 
 
 While `pycountry` is primarily designed to serve as a database for ISO standards, CountryWrangler is specifically developed to normalize country data. Both libraries cater to their respective use cases. Additionally, CountryWrangler offers extra functions that are designed to handle messy country data with ease.
 
