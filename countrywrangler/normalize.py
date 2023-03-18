@@ -21,8 +21,9 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 from phone_iso3166.country import *
 
-from countrywrangler.databases.names import CountryNames
+from countrywrangler.databases.names import NameMappings
 from countrywrangler.databases.tld import TLDMappings
+from countrywrangler.databases.codes import CodeMappings
 
 
 class Normalize:
@@ -42,7 +43,7 @@ class Normalize:
         # Convert to lower case according to database records and remove whitespace
         text = text.lower().strip()
         # Database lookup
-        names = CountryNames.to_alpha2()
+        names = NameMappings.names()
         if text in names:
             return names[text]
         else:
@@ -110,6 +111,52 @@ def tld_to_alpha2(tld: str, **kwargs) -> str:
     return alpha_2
 
 
+def code_to_alpha2(text: str, **kwargs) -> str:
+    """ Straightforward approach to convert alpha-3 and alpha-2 codes to alpha-2 format, 
+    returning None in the absence of a match.
 
+    Although `UK` for United Kingdom is not an ISO alpha-2 code it's misuse is common practice. 
+    CountryWrangler automatically converts `UK` to `GB`. This behavior can be disabled by setting 
+    the optional parameter `allow_uk=False`.
+    """    
+    # Immediately returns None if provided string is empty   
+    if not text:
+        return None
+    # Parse kwargs option and set up default settings
+    if not "upper_only " in kwargs:
+        upper_only = False # Default value
+    else:
+        if isinstance(kwargs["upper_only"], bool):
+            upper_only  = kwargs["upper_only"]
+        else:
+            msg = "Option Error! upper_only  option expects bool not " + str(type(kwargs["upper_only "]))
+            raise TypeError(msg) 
+    # Parse kwargs option and set up default settings
+    if not "allow_uk " in kwargs:
+        allow_uk = True # Default value
+    else:
+        if isinstance(kwargs["allow_uk"], bool):
+            allow_uk  = kwargs["allow_uk"]
+        else:
+            msg = "Option Error! allow_uk  option expects bool not " + str(type(kwargs["allow_uk "]))
+            raise TypeError(msg)
+    # Convert to upper case according to database records and remove whitespace
+    if upper_only:
+        text = text.strip()
+    else:
+        # Only codes in upper case will be matched
+        text = text.upper().strip()
+    # Check if string is UK and convert it to GB if it is and option is set to True
+    if allow_uk and text == "UK":
+        return "GB"
+    # Return early if text can't possibly not be an alpha_3 nor an alpah_2 country code
+    if not range(2,3):
+        return None
+    # Database lookup
+    codes = CodeMappings.codes()
+    if text in codes:
+        return codes[text]
+    else:
+        return None
 
 

@@ -19,9 +19,9 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 '''
 
-class CountryNames:
+class NameMappings:
 
-    def to_alpha2():
+    def names():
         return {
             "afghánistán":"AF",
             "alandy":"AX",
