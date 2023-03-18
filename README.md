@@ -78,6 +78,21 @@ print(alpha2)
 >>> DE
 ```
 
+### Country code to Alpha-2
+`code_to_alpha2` converts both alpha-3 and alpha-2 codes to alpha-2 format, and returning None in the absence of a match.
+This can also be used to validate if a given string is a country code.
+
+Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/country_code/
+
+```python
+import countrywrangler as cw
+
+alpha2 = cw.Normalize.code_to_alpha2("GBR")
+print(alpha2)
+
+>>> GB
+```
+
 
 ### Phone Number to Alpha-2
 `phone_to_alpha2` accepts a string or integer representing a phone number in international format (E.164) and returns the corresponding ISO-3166-1 alpha-2 country code of the phone number's origin. If the input is not a valid phone number, the function returns `None`.
@@ -112,20 +127,7 @@ print(alpha2)
 >>> GB
 ```
 
-### Country code to Alpha-2
-`code_to_alpha2` converts both alpha-3 and alpha-2 codes to alpha-2 format, and returning None in the absence of a match.
-This can also be used to validate if a given string is a country code.
 
-Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/country_code/
-
-```python
-import countrywrangler as cw
-
-alpha2 = cw.Normalize.code_to_alpha2("GBR")
-print(alpha2)
-
->>> GB
-```
 
 
 
