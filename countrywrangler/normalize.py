@@ -20,6 +20,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 '''
 
 from phone_iso3166.country import *
+from fuzzywuzzy import fuzz
 
 from countrywrangler.databases.names import NameMappings
 from countrywrangler.databases.tld import TLDMappings
@@ -29,9 +30,9 @@ from countrywrangler.databases.timezones import TimezoneMappings
 
 class Normalize:
 
-    def name_to_alpha2(text: str) -> str:
+    def name_to_alpha2(text: str, **kwargs) -> str:
         '''
-        This function searches for a corresponding Alpha 2 code in the database for 
+        This function searches for a corresponding alpha-2 code in the database for 
         both common and official country names in different languages. If no match 
         is found, None is returned. 
 
@@ -41,14 +42,41 @@ class Normalize:
         # Immediately returns None if provided string is empty   
         if not text:
             return None
+        
+        # Parse kwargs option and set up default settings
+        if not "use_fuzzy" in kwargs:
+            use_fuzzy = False # Default value
+        else:
+            if isinstance(kwargs["use_fuzzy"], bool):
+                use_fuzzy = kwargs["use_fuzzy"]
+            else:
+                msg = "Option Error! use_fuzzy option expects bool not " + str(type(kwargs["use_fuzzy"]))
+                raise TypeError(msg)
+
         # Convert to lower case according to database records and remove whitespace
         text = text.lower().strip()
         # Database lookup
         names = NameMappings.names()
-        if text in names:
-            return names[text]
+        if not use_fuzzy:
+            if text in names:
+                return names[text]
+            else:
+                return None
         else:
-            return None
+            # Iterate over the dictionary keys and find the best match with the search term
+            best_match = None
+            best_ratio = 0
+
+            for country in names:
+                ratio = fuzz.token_set_ratio(country.lower(), text.lower())
+                if ratio > best_ratio:
+                    best_ratio = ratio
+                    best_match = country
+            # If a match was found with a high enough ratio, print the corresponding country code
+            if best_ratio >= 90:
+                return names[best_match]
+            else:
+                return None
         
 
     def phone_to_alpha2(phone: typing.Union[str, int]) -> str:
