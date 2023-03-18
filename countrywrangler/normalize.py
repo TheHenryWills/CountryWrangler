@@ -24,6 +24,7 @@ from phone_iso3166.country import *
 from countrywrangler.databases.names import NameMappings
 from countrywrangler.databases.tld import TLDMappings
 from countrywrangler.databases.codes import CodeMappings
+from countrywrangler.databases.timezones import TimezoneMappings
 
 
 class Normalize:
@@ -155,6 +156,24 @@ class Normalize:
         codes = CodeMappings.codes()
         if text in codes:
             return codes[text]
+        else:
+            return None
+        
+
+    def timezone_to_alpha2(text: str) -> str:
+        """ This function takes a timezone name such as "Europe/Vienna" and returns the corresponding 
+        alpha-2 country code e.g., 'AT' if it's an exact match. If there's no exact match, the function 
+        returns None instead.
+        """  
+        # Immediately returns None if provided string is empty   
+        if not text:
+            return None
+        # Convert to lower case according to database records and remove whitespace
+        text = text.lower().strip()
+        # Check if text is in timezone database and return country code of any
+        timezones = TimezoneMappings.zones()
+        if text in timezones:
+            return timezones[text].upper()
         else:
             return None
 

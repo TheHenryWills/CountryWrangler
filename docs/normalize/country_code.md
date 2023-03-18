@@ -42,3 +42,27 @@ print(cw.Normalize.name_to_alpha2(123456677))                # Not a country cod
 >>> None
 >>> None
 ```
+
+The conversion of `UK` to `GB` can be diabled by passing the option `allow_uk=False`. Once disabled `None` is returned for `UK` values.
+
+``` py title="OPTIONS - UK conversion disabled", linenums="1", hl_lines="3"
+import countrywrangler as cw
+
+print(cw.Normalize.tld_to_alpha2("UK", allow_uk=False))
+print(cw.Normalize.tld_to_alpha2("GB", allow_uk=False))
+
+>>> None
+>>> GB
+```
+
+To only allow the matching of upper case inputs pass the `upper_only=True` option.
+
+``` py title="OPTIONS - Only match upper case inputs", linenums="1", hl_lines="3"
+import countrywrangler as cw
+
+print(cw.Normalize.tld_to_alpha2("us", upper_only=True))
+print(cw.Normalize.tld_to_alpha2("US", upper_only=True))
+
+>>> None
+>>> US
+```

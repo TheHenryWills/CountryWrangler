@@ -2,6 +2,14 @@
 class CodeMappings:
 
     def codes():
+        all = dict()
+        all.update(CodeMappings.alpha2())
+        all.update(CodeMappings.alpha3())
+        return all
+
+
+
+    def alpha3():
         return {
             "AFG": "AF",
             "ALA": "AX",
@@ -251,7 +259,12 @@ class CodeMappings:
             "ESH": "EH",
             "YEM": "YE",
             "ZMB": "ZM",
-            "ZWE": "ZW",
+            "ZWE": "ZW"
+        }
+    
+
+    def alpha2():
+        return {
             "AF": "AF",
             "AX": "AX",
             "AL": "AL",
@@ -502,3 +515,7 @@ class CodeMappings:
             "ZM": "ZM",
             "ZW": "ZW"
         }
+        
+
+
+
