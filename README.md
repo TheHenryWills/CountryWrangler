@@ -161,7 +161,7 @@ the code `ES` can produce a list of country codes corresponding to all countries
 
 > **Warning**
 >   If it is not desired that ambiguous country codes are being returned as a list, the option `allow_ambiguous=False` can be 
-    passed as a parameter. This will restrict the output to a single, unambiguous country code. I case matching ambiguous countries is not turned of the function either returns a string (uambiguous) or a list (ambiguous), you code must be able to handle the different types.
+    passed as a parameter. This will restrict the output to a single, unambiguous country code. I case matching ambiguous countries is not turned off the function either returns a string (uambiguous) or a list (ambiguous), you code must be able to handle the different types.
 
 Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/language/
 
