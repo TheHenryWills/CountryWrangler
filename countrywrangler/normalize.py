@@ -26,6 +26,7 @@ from countrywrangler.databases.names import NameMappings
 from countrywrangler.databases.tld import TLDMappings
 from countrywrangler.databases.codes import CodeMappings
 from countrywrangler.databases.timezones import TimezoneMappings
+from countrywrangler.databases.languages import LanguageMappings
 
 
 class Normalize:
@@ -205,4 +206,41 @@ class Normalize:
         else:
             return None
 
+
+    def language_to_alpha2(text: str, **kwargs) -> str:
+        '''
+        The function matches ISO 639-1, ISO 639-2 language codes and IETF language tags to an ISO-3361-1 Alpha-2 country code. 
+        It is important to note that while IETF language tags will always be unambiguous, ISO codes may not be. For instance, 
+        the code 'ES' can produce a list of country codes corresponding to all countries where Spanish is spoken.
+
+        If it is not desired that ambiguous country codes are being returned as a list, the option allow_ambiguous=False can be 
+        passed as a parameter. This will restrict the output to a single, unambiguous country code.
+        '''
+        # Immediately returns None if provided string is empty   
+        if not text:
+            return None
+        # Convert to lower case according to database records and remove whitespace
+        text = text.lower().strip()
+
+        # Parse kwargs option and set up default settings
+        if not "allow_ambiguous" in kwargs:
+            allow_ambiguous = True # Default value
+        else:
+            if isinstance(kwargs["allow_ambiguous"], bool):
+                allow_ambiguous  = kwargs["allow_ambiguous"]
+            else:
+                msg = "Option Error! allow_ambiguous option expects bool not " + str(type(kwargs["allow_ambiguous"]))
+                raise TypeError(msg) 
+        # Load chosen database
+        if allow_ambiguous:
+            languages = LanguageMappings.all()
+        else:
+            languages = LanguageMappings.unambiguous()   
+
+        # Lookup if match can be found in database and return result.
+        if text in languages:
+            alpha_2 = languages[text]
+        else:
+            alpha_2 = None
+        return alpha_2
 
