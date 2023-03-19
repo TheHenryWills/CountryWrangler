@@ -44,6 +44,20 @@ class Normalize:
         if not text:
             return None
         
+        # Convert to lower case according to database records and remove whitespace
+        text = text.lower().strip()
+
+        # Hard coded fixes for edge cases.
+        if text == "u.s." or text == "u.s.a" or text == "u s a":
+            return "US"
+        
+        # There is no country name in existence with less than 4 characters. If they
+        # are less than 4 they are likley alpha codes and can be checked with the
+        # corresponding function. For all strings less than 4 characters we return
+        # None in order to make fuzzy search more accurate.
+        if len(text) < 4:
+            return None
+        
         # Parse kwargs option and set up default settings
         if not "use_fuzzy" in kwargs:
             use_fuzzy = False # Default value
@@ -54,8 +68,6 @@ class Normalize:
                 msg = "Option Error! use_fuzzy option expects bool not " + str(type(kwargs["use_fuzzy"]))
                 raise TypeError(msg)
 
-        # Convert to lower case according to database records and remove whitespace
-        text = text.lower().strip()
         # Database lookup
         names = NameMappings.names()
         if not use_fuzzy:
@@ -64,6 +76,23 @@ class Normalize:
             else:
                 return None
         else:
+            # Exclude known edge cases from fuzzy search
+            if text == "howland island":    # Would become IS for Iceland
+                return "US"
+            elif text == "netherlands antilles": # Would become NL for Netherlands
+                return "AN"
+            elif text == "juan de nova island" or text == "europa island": # Would become IS for Iceland
+                return "TF"
+            elif text == "christmas island": # Would become IS for Iceland
+                return "AU"          
+
+            # Check if string contains 'Island' and return value as bool. This is to prevent
+            # 'IS' for Iceland to be returned by fuzzy for such inputs.
+            if "island" in text:
+                contains_island = True
+            else:
+                contains_island = False  
+
             # Iterate over the dictionary keys and find the best match with the search term
             best_match = None
             best_ratio = 0
@@ -74,7 +103,10 @@ class Normalize:
                     best_ratio = ratio
                     best_match = country
             # If a match was found with a high enough ratio, print the corresponding country code
-            if best_ratio >= 90:
+            if not contains_island and best_ratio >= 90:
+                return names[best_match]
+            # Should capture all remaining false-postives for IS - Iceland
+            elif contains_island and best_ratio >= 95:
                 return names[best_match]
             else:
                 return None

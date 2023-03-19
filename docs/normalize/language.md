@@ -9,7 +9,7 @@ the code `ES` can produce a list of country codes corresponding to all countries
     If it is not desired that ambiguous country codes are being returned as a list, the option `allow_ambiguous=False` can be 
     passed as a parameter. This will restrict the output to a single, unambiguous country code.
 
-    I case matching ambiguous countries is not turned of the function either returns a string (uambiguous) or a list (ambiguous),
+    I case matching ambiguous countries is not turned off the function either returns a string (uambiguous) or a list (ambiguous),
     you code must be able to handle the different types.
 
 
@@ -17,7 +17,7 @@ the code `ES` can produce a list of country codes corresponding to all countries
 ``` py title="Basic Usage", linenums="1", hl_lines="3"
 import countrywrangler as cw
 
-alpha2 = cw.Normalize.language_to_alpha2("de_DE")
+alpha2 = cw.Normalize.language_to_alpha2("de-DE")
 print(alpha2)
 
 >>> DE
@@ -28,7 +28,7 @@ import countrywrangler as cw
 
 print(cw.Normalize.phone_to_alpha2("de"))
 print(cw.Normalize.phone_to_alpha2("sv"))
-print(cw.Normalize.phone_to_alpha2("en_us"))
+print(cw.Normalize.phone_to_alpha2("en-us"))
 
 
 >>> ["AT", "BE", "CH", "DE", "IT", "LI", "LU"]
