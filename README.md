@@ -142,13 +142,6 @@ print(alpha2)
 ### Timezone to Alpha-2
 `timezone_to_alpha2` takes a geographic timezone name such as `Europe/Vienna` and returns the corresponding alpha-2 country code e.g., `AT` if it's an exact match. If there's no exact match, the function returns `None` instead.
 
-> **Warning**
->   If it is not desired that ambiguous country codes are being returned as a list, the option `allow_ambiguous=False` can be 
-    passed as a parameter. This will restrict the output to a single, unambiguous country code.
-
-    I case matching ambiguous countries is not turned of the function either returns a string (uambiguous) or a list (ambiguous),
-    you code must be able to handle the different types.
-
 Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/timezone/
 
 ```python
@@ -165,6 +158,10 @@ print(alpha2)
 `language_to_alpha2` matches ISO 639-1, ISO 639-2 language codes and IETF language tags to an ISO-3361-1 Alpha-2 country code. 
 It is important to note that while IETF language tags will always be unambiguous, ISO codes may not be. For instance, 
 the code `ES` can produce a list of country codes corresponding to all countries where Spanish is spoken.
+
+> **Warning**
+>   If it is not desired that ambiguous country codes are being returned as a list, the option `allow_ambiguous=False` can be 
+    passed as a parameter. This will restrict the output to a single, unambiguous country code. I case matching ambiguous countries is not turned of the function either returns a string (uambiguous) or a list (ambiguous), you code must be able to handle the different types.
 
 Full documentation: https://countrywrangler.readthedocs.io/en/latest/normalize/language/
 
