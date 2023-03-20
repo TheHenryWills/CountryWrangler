@@ -77,13 +77,13 @@ class Normalize:
                 return None
         else:
             # Exclude known edge cases from fuzzy search
-            if text == "howland island":    # Would become IS for Iceland
+            if text == "howland island" or text == "baker island":    # Would become IS for Iceland
                 return "US"
             elif text == "netherlands antilles": # Would become NL for Netherlands
                 return "AN"
             elif text == "juan de nova island" or text == "europa island": # Would become IS for Iceland
                 return "TF"
-            elif text == "christmas island": # Would become IS for Iceland
+            elif text == "christmas island" or text == "norfolk island": # Would become IS for Iceland
                 return "AU"          
 
             # Check if string contains 'Island' and return value as bool. This is to prevent
