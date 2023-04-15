@@ -79,6 +79,8 @@ class Normalize:
             # Exclude known edge cases from fuzzy search
             if text == "howland island" or text == "baker island":    # Would become IS for Iceland
                 return "US"
+            elif text == "united states" or text == "united states of america": # Would become UM for United States Minor Outlying Islands
+                return "US"
             elif text == "netherlands antilles": # Would become NL for Netherlands
                 return "AN"
             elif text == "juan de nova island" or text == "europa island": # Would become IS for Iceland
